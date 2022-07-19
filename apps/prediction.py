@@ -71,7 +71,7 @@ def app():
     clf = joblib.load("clf.pkl")
     
     prediction = clf.predict_proba(input_df)[:,1]
-    st.subheader("The percentage of the risk of heart attack is " + str(round(prediction.item()*100)) + "%")
+    st.subheader("You have " + str(round(prediction.item()*100)) + "% chance of having a heart attack")
 
 
 
